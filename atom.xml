@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW">
+    <title type="text">tsuhsin</title>
+    <subtitle type="html">MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</subtitle>
+    <updated>2021-01-31T01:08:34&#43;08:00</updated>
+    <id>https://example.com/</id>
+    <link rel="alternate" type="text/html" href="https://example.com/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <author>
+            <name>tsuhsin</name>
+            <uri>https://example.com/</uri>
+            
+                <email>reuixiy@gmail.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
+    <generator uri="https://gohugo.io/" version="0.80.0">Hugo</generator>
+        <entry>
+            <title type="text">Hugo 架站</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/hello-world/" />
+            <id>https://example.com/posts/hello-world/</id>
+            <updated>2021-01-31T00:51:53&#43;08:00</updated>
+            <published>2021-01-30T07:36:18&#43;08:00</published>
+            <author>
+                    <name>tsuhsin</name>
+                    <uri>https://tsuhsin.github.io/</uri>
+                    <email>reuixiy@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安裝 Hugo brew install hugo 常用指令 https://gohugo.io/getting-started/quick-start/ 建立新網站 hugo new site xxxx 下載主題 我使用的主題 https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md ~ $ cd blog ~/blog $ git init ~/blog $ git…</summary>
+            
+                <content type="html">&lt;h3 id=&#34;安裝-hugo&#34;&gt;安裝 Hugo&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;常用指令&#34;&gt;常用指令&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;https://gohugo.io/getting-started/quick-start/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;建立新網站&#34;&gt;建立新網站&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;hugo new site xxxx
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;下載主題&#34;&gt;下載主題&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我使用的主題&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md&#34;&gt;https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-=&#34; data-lang=&#34;=&#34;&gt;~ $ cd blog
+~/blog $ git init
+~/blog $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;新建頁面&#34;&gt;新建頁面&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;hugo new &amp;quot;xxx.md&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;build&#34;&gt;build&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;local-serve-live-reload&#34;&gt;Local serve (Live Reload)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;更新-hugo&#34;&gt;更新 Hugo&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;brew upgrade hugo
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+</feed>
