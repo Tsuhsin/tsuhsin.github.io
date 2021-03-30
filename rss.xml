@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>https://example.com/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.80.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>reuixiy@gmail.com (tsuhsin)</managingEditor><webMaster>reuixiy@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 01 Feb 2021 22:51:06 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://example.com/rss.xml"/><item><title>Hugo 架站</title><link>https://example.com/posts/hello-world/</link><guid isPermaLink="true">https://example.com/posts/hello-world/</guid><pubDate>Sat, 30 Jan 2021 07:36:18 +0800</pubDate><author>reuixiy@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>https://example.com/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.82.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>reuixiy@gmail.com (tsuhsin)</managingEditor><webMaster>reuixiy@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 30 Mar 2021 17:46:03 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://example.com/rss.xml"/><item><title>Hugo 架站</title><link>https://example.com/posts/hello-world/</link><guid isPermaLink="true">https://example.com/posts/hello-world/</guid><pubDate>Sat, 30 Jan 2021 07:36:18 +0800</pubDate><author>reuixiy@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
 &lt;pre>&lt;code>brew install hugo
 &lt;/code>&lt;/pre>&lt;h3 id="常用指令">常用指令&lt;/h3>
 &lt;blockquote>
@@ -18,7 +18,9 @@
 ~/blog $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
 &lt;/code>&lt;/pre>&lt;h4 id="新建頁面">新建頁面&lt;/h4>
 &lt;pre>&lt;code>hugo new &amp;quot;xxx.md&amp;quot;
-&lt;/code>&lt;/pre>&lt;h4 id="build">build&lt;/h4>
+&lt;/code>&lt;/pre>&lt;h4 id="設定-config-檔">設定 config 檔&lt;/h4>
+&lt;p>可參考下載得住提的說明（通常會有example site）&lt;/p>
+&lt;h4 id="build">build&lt;/h4>
 &lt;pre>&lt;code>hugo
 &lt;/code>&lt;/pre>&lt;h4 id="local-serve-live-reload">Local serve (Live Reload)&lt;/h4>
 &lt;pre>&lt;code>hugo server
