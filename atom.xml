@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">tsuhsin</title><subtitle type="html">MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</subtitle><updated>2021-03-30T17:46:03+00:00</updated><id>https://example.com/</id><link rel="alternate" type="text/html" href="https://example.com/"/><link rel="self" type="application/atom+xml" href="https://example.com/atom.xml"/><author><name>tsuhsin</name><uri>https://example.com/</uri><email>reuixiy@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.82.0">Hugo</generator><entry><title type="text">Hugo 架站</title><link rel="alternate" type="text/html" href="https://example.com/posts/hello-world/"/><id>https://example.com/posts/hello-world/</id><updated>2021-03-30T17:45:55+00:00</updated><published>2021-01-30T07:36:18+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>reuixiy@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安裝 Hugo brew install hugo 常用指令 https://gohugo.io/getting-started/quick-start/ 建立新網站 hugo new site xxxx 下載主題 我使用的主題 https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md ~ $ cd blog ~/blog $ git init ~/blog $ git…</summary><content type="html">&lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">tsuhsin</title><subtitle type="html">MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</subtitle><updated>2021-03-31T14:37:54+00:00</updated><id>http://tsuhsin.github.io/</id><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/"/><link rel="self" type="application/atom+xml" href="http://tsuhsin.github.io/atom.xml"/><author><name>tsuhsin</name><uri>http://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.82.0">Hugo</generator><entry><title type="text">使用 ssh key 連接 Github</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/set-ssh/"/><id>http://tsuhsin.github.io/posts/set-ssh/</id><updated>2021-03-31T14:37:51+00:00</updated><published>2021-02-02T19:20:48+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 permission deny （使用…</summary><content type="html">&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
+&lt;blockquote>
+&lt;p>所有生成的 ssh key 都會在 &lt;code>~/.ssh&lt;/code> 裡&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="連接單一-github-帳號">連接單一 Github 帳號&lt;/h2>
+&lt;h3 id="生成-ssh-key">生成 ssh key&lt;/h3>
+&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ ssh-keygen -t rsa -b 4096 -C &amp;quot;你的 Github email&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>接下來一路 Enter 到底就可以了，這時 &lt;code>.ssh&lt;/code> 裡面就可以看到 &lt;code>id_rsa&lt;/code> 和 &lt;code>id_rsa.pub&lt;/code> 這兩個檔案，前者是私鑰、後者是公鑰（後面有.pub的）&lt;/p>
+&lt;h3 id="把公鑰設定在-github-上">把公鑰設定在 Github 上&lt;/h3>
+&lt;p>先將剛剛生成的公鑰 &lt;code>id_rsa.pub&lt;/code> 複製起來&lt;/p>
+&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ cat id_rsa.pub
+&lt;/code>&lt;/pre>&lt;p>登入你的 Github ，到 Setting &amp;gt; SSH and GPG keys 這個頁面，點下 &lt;code>New SSH key&lt;/code> 將複製好的公鑰貼上，點 &lt;code>add SSH key&lt;/code> 就設定完成。（ title 那裡可以自己取名）
+&lt;img src="https://i.imgur.com/Yw0ZBH8.png" alt="">&lt;/p>
+&lt;h2 id="連接多個-github-帳號">連接多個 Github 帳號&lt;/h2>
+&lt;h3 id="生成-ssh-key-1">生成 ssh key&lt;/h3>
+&lt;p>&lt;code>ssh-keygen&lt;/code> 之後看到這句時&lt;/p>
+&lt;pre>&lt;code>Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa):
+&lt;/code>&lt;/pre>&lt;p>先不要 Enter，將預設的&lt;code>id_rsa&lt;/code>後加上你的 GitHub 帳號名
+例如：&lt;code>id_rsa_sandy&lt;/code>&lt;/p>
+&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh"># Github帳號 1
+$ ssh-keygen -t rsa -b 4096 -C &amp;quot;sandy@gmail.com&amp;quot;
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa): /Users/azusa2658/.ssh/id_rsa_sandy
+# Github帳號 2
+$ ssh-keygen -t rsa -b 4096 -C &amp;quot;cindy@gmail.com&amp;quot;
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa): /Users/azusa2658/.ssh/id_rsa_cindy
+&lt;/code>&lt;/pre>&lt;h3 id="添加私鑰到-ssh-agent">添加私鑰到 ssh-agent&lt;/h3>
+&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ eval &amp;quot;$(ssh-agent -s)&amp;quot;
+$ ssh-add ~/.ssh/id_rsa_sandy
+$ ssh-add ~/.ssh/id_rsa_cindy
+&lt;/code>&lt;/pre>&lt;h3 id="設定-config-檔">設定 config 檔&lt;/h3>
+&lt;p>在 &lt;code>~/.ssh&lt;/code> 下新增一個 config 檔，內容如下（請自行修改&lt;code>host&lt;/code> 和 &lt;code>IdentityFile&lt;/code>）&lt;/p>
+&lt;pre>&lt;code class="language-=" data-lang="=">host sandy.github.com
+Hostname github.com
+User sandy
+IdentityFile ~/.ssh/id_rsa_sandy
+Host cindy.github.com
+HostName github.com
+User cindy
+IdentityFile ~/.ssh/id_rsa_cindy
+&lt;/code>&lt;/pre>&lt;h3 id="修改相對應-repository-的遠端連結網址">修改相對應 Repository 的遠端連結網址&lt;/h3>
+&lt;pre>&lt;code># Github帳號 1
+~/sandy-blog
+$ git remote set-url origin git@sandy.github.com:sandy/sandy-blog.git
+# Github帳號 2
+~/cindy-blog
+$ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
+&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;p>這邊 &lt;code>git@&lt;/code> 後接的主機名分别是 &lt;code>sandy.github.com&lt;/code> 和 &lt;code>cindy.github.com&lt;/code>，不再是預設的 &lt;code>github.com&lt;/code> 了
+之後 clone repository 時也要注意，修改為相應的主機名&lt;/p>
+&lt;/blockquote>
+&lt;p>最後將相應的公鑰加到相對應 GitHub 帳號就完成了～&lt;/p>
+&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://io-oi.me/tech/ssh-with-multiple-github-accounts/">使用 SSH 連接到 GitHub（多帳號）&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://my.oschina.net/stefanzhlg/blog/529403">git 配置多個SSH-Key&lt;/a>&lt;/li>
+&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/ssh/" term="ssh" label="ssh"/><category scheme="http://tsuhsin.github.io/tags/github/" term="github" label="github"/></entry><entry><title type="text">使用 Hugo 架設靜態網站</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/hello-world/"/><id>http://tsuhsin.github.io/posts/hello-world/</id><updated>2021-03-31T14:37:51+00:00</updated><published>2021-01-30T07:36:18+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構…</summary><content type="html">&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。
+Hugo網站可以部署在任何地方，包括 Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Aerobatic、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure和CloudFront，並可以與CDN很好地協作。&lt;/p>
+&lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
 &lt;pre>&lt;code>brew install hugo
 &lt;/code>&lt;/pre>&lt;h3 id="常用指令">常用指令&lt;/h3>
 &lt;blockquote>
@@ -19,11 +79,14 @@
 &lt;/code>&lt;/pre>&lt;h4 id="新建頁面">新建頁面&lt;/h4>
 &lt;pre>&lt;code>hugo new &amp;quot;xxx.md&amp;quot;
 &lt;/code>&lt;/pre>&lt;h4 id="設定-config-檔">設定 config 檔&lt;/h4>
-&lt;p>可參考下載得住提的說明（通常會有example site）&lt;/p>
+&lt;p>可參考下載主題裡的說明（通常會有example site）&lt;/p>
 &lt;h4 id="build">build&lt;/h4>
 &lt;pre>&lt;code>hugo
 &lt;/code>&lt;/pre>&lt;h4 id="local-serve-live-reload">Local serve (Live Reload)&lt;/h4>
 &lt;pre>&lt;code>hugo server
 &lt;/code>&lt;/pre>&lt;h4 id="更新-hugo">更新 Hugo&lt;/h4>
 &lt;pre>&lt;code>brew upgrade hugo
-&lt;/code>&lt;/pre></content></entry></feed>
+&lt;/code>&lt;/pre>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/quick-start/">Hugo Documentation&lt;/a>&lt;/li>
+&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/hugo/" term="hugo" label="hugo"/><category scheme="http://tsuhsin.github.io/tags/blog/" term="blog" label="blog"/></entry></feed>
