@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">tsuhsin</title><subtitle type="html">MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</subtitle><updated>2021-03-31T15:49:22+00:00</updated><id>http://tsuhsin.github.io/</id><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/"/><link rel="self" type="application/atom+xml" href="http://tsuhsin.github.io/atom.xml"/><author><name>tsuhsin</name><uri>http://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.82.0">Hugo</generator><entry><title type="text">使用 ssh key 連接 Github</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/set-ssh/"/><id>http://tsuhsin.github.io/posts/set-ssh/</id><updated>2021-03-31T15:49:19+00:00</updated><published>2021-02-02T19:20:48+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 permission deny （使用…</summary><content type="html">&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><title type="text">tsuhsin</title><subtitle type="html">MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</subtitle><updated>2021-03-31T16:22:40+00:00</updated><id>http://tsuhsin.github.io/</id><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/"/><link rel="self" type="application/atom+xml" href="http://tsuhsin.github.io/atom.xml"/><author><name>tsuhsin</name><uri>http://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.82.0">Hugo</generator><entry><title type="text">使用 ssh key 連接 Github</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/set-ssh/"/><id>http://tsuhsin.github.io/posts/set-ssh/</id><updated>2021-03-31T16:22:37+00:00</updated><published>2021-02-02T19:20:48+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 permission deny （使用…</summary><content type="html">&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
 &lt;blockquote>
 &lt;p>所有生成的 ssh key 都會在 &lt;code>~/.ssh&lt;/code> 裡&lt;/p>
 &lt;/blockquote>
@@ -56,7 +56,7 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;li>&lt;a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://io-oi.me/tech/ssh-with-multiple-github-accounts/">使用 SSH 連接到 GitHub（多帳號）&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://my.oschina.net/stefanzhlg/blog/529403">git 配置多個SSH-Key&lt;/a>&lt;/li>
-&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/ssh/" term="ssh" label="ssh"/><category scheme="http://tsuhsin.github.io/tags/github/" term="github" label="github"/></entry><entry><title type="text">Git 本地端 push 到遠端 (Github)</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/git-start/"/><id>http://tsuhsin.github.io/posts/git-start/</id><updated>2021-03-31T15:49:19+00:00</updated><published>2021-02-02T18:00:00+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前置作業 進 command line 先在本地建一個專案資料夾 (local repository…</summary><content type="html">&lt;h3 id="前置作業">前置作業&lt;/h3>
+&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/ssh/" term="ssh" label="ssh"/><category scheme="http://tsuhsin.github.io/tags/github/" term="github" label="github"/></entry><entry><title type="text">Git 本地端 push 到遠端 (Github)</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/git-start/"/><id>http://tsuhsin.github.io/posts/git-start/</id><updated>2021-03-31T16:22:37+00:00</updated><published>2021-02-02T18:00:00+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前置作業 進 command line 先在本地建一個專案資料夾 (local repository…</summary><content type="html">&lt;h3 id="前置作業">前置作業&lt;/h3>
 &lt;p>進 command line 先在本地建一個專案資料夾 (local repository)並進資料夾&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -110,7 +110,7 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">push&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">master&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="http://tsuhsin.github.io/tags/git/" term="git" label="git"/><category scheme="http://tsuhsin.github.io/tags/github/" term="github" label="github"/></entry><entry><title type="text">使用 Hugo 架設靜態網站</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/hugo-start/"/><id>http://tsuhsin.github.io/posts/hugo-start/</id><updated>2021-03-31T15:49:19+00:00</updated><published>2021-01-30T07:36:18+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構…</summary><content type="html">&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。&lt;/p>
+&lt;/div></content><category scheme="http://tsuhsin.github.io/tags/git/" term="git" label="git"/><category scheme="http://tsuhsin.github.io/tags/github/" term="github" label="github"/></entry><entry><title type="text">使用 Hugo 架設靜態網站</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/hugo-start/"/><id>http://tsuhsin.github.io/posts/hugo-start/</id><updated>2021-03-31T16:22:37+00:00</updated><published>2021-01-30T07:36:18+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構…</summary><content type="html">&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。&lt;/p>
 &lt;p>Hugo網站可以部署在任何地方，包括 Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Aerobatic、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure和CloudFront，並可以與CDN很好地協作。&lt;/p>
 &lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -189,4 +189,124 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;ol>
 &lt;li>&lt;a href="https://gohugo.io/getting-started/quick-start/">Hugo Documentation&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://io-oi.me/tech/documentation-of-hugo-theme-meme/">Hugo 主題 MemE 文檔&lt;/a>&lt;/li>
-&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/hugo/" term="hugo" label="hugo"/><category scheme="http://tsuhsin.github.io/tags/blog/" term="blog" label="blog"/></entry></feed>
+&lt;/ol></content><category scheme="http://tsuhsin.github.io/tags/hugo/" term="hugo" label="hugo"/><category scheme="http://tsuhsin.github.io/tags/blog/" term="blog" label="blog"/></entry><entry><title type="text">設定 command line 為 Z-shell 環境</title><link rel="alternate" type="text/html" href="http://tsuhsin.github.io/posts/set-zsh/"/><id>http://tsuhsin.github.io/posts/set-zsh/</id><updated>2021-03-31T16:22:37+00:00</updated><published>2019-08-30T00:06:11+08:00</published><author><name>tsuhsin</name><uri>https://tsuhsin.github.io/</uri><email>tsuhsin860509@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安裝z-shell 如果沒有brew的話要先安裝 brew 安裝 brew 1 $ ruby…</summary><content type="html">&lt;h2 id="安裝z-shell">安裝z-shell&lt;/h2>
+&lt;p>如果沒有brew的話要先安裝 &lt;code>brew&lt;/code>&lt;/p>
+&lt;h4 id="安裝-brew">安裝 &lt;code>brew&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">ruby&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">e&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="安裝-zsh">安裝 &lt;code>zsh&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="安裝-oh-my-zsh">安裝 &lt;code>oh-my-zsh&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">sh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>zsh 的設定檔放在 &lt;code>~/.zshrc&lt;/code> ，這個檔案需要我們自己產生由於我們用 &lt;code>oh-my-zsh&lt;/code> ，所以這邊建議使用 &lt;code>oh-my-zsh&lt;/code> 預設的 templete 比較省事&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">cp&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.oh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">templates&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zshrc.zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">template&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.zshrc&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="修改預設的-shell-為-zsh">修改預設的 shell 為 &lt;code>zsh&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">chsh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">s&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">usr&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">bin&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="設定主題">設定主題&lt;/h2>
+&lt;h3 id="修改-zshrc">修改 &lt;code>.zshrc&lt;/code>&lt;/h3>
+&lt;ol>
+&lt;li>切資料夾至Home &lt;code>cd ~&lt;/code>&lt;/li>
+&lt;li>列出所有資料(包含隱藏檔) &lt;code>ls -la&lt;/code> 會看到名稱為 &lt;code>.zshrc&lt;/code> 的檔案&lt;/li>
+&lt;li>修改此檔案 &lt;code>vim .zshrc&lt;/code>&lt;/li>
+&lt;li>進到vim之後會看到&lt;code>ZSH_THEME=&amp;quot;bira&amp;quot;&lt;/code> 這句，代表現在套用的主題為&lt;code>bira&lt;/code>，修改引號內的內容即可更換主題&lt;/li>
+&lt;/ol>
+&lt;h3 id="有哪些主題">有哪些主題&lt;/h3>
+&lt;p>&lt;code>cd ~/.oh-my-zsh/themes&lt;/code>可以看有哪些主題，&lt;a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes">這裡&lt;/a>可以看主題長什麼樣子&lt;/p>
+&lt;h3 id="agnoster主題">agnoster主題&lt;/h3>
+&lt;p>如果換了agnoster主題會需要&lt;a href="https://github.com/powerline/fonts">下載字型&lt;/a>，否則會有亂碼出現，如下圖
+&lt;img src="https://i.imgur.com/KMAEGPC.png" alt="">&lt;/p>
+&lt;h4 id="下載字型">下載字型&lt;/h4>
+&lt;p>將字型clone至Home&lt;/p>
+&lt;pre>&lt;code>git clone https://github.com/powerline/fonts.git
+sudo ./fonts/install.sh
+&lt;/code>&lt;/pre>&lt;h4 id="設定字型">設定字型&lt;/h4>
+&lt;p>以 iTerm2 為例：&lt;/p>
+&lt;p>iTerm2 &amp;gt; Preference &amp;gt; Profiles &amp;gt; Text &amp;gt; Change Font &lt;br>
+將字型改成 &lt;code>Meslo LG M DZ for Powerline&lt;/code>
+&lt;img src="https://i.imgur.com/kk87Aue.png" alt="">
+&lt;img src="https://i.imgur.com/sTJ70cr.png" alt="">&lt;/p>
+&lt;h2 id="syntax-highlighting-設定">Syntax Highlighting 設定&lt;/h2>
+&lt;h3 id="下載-zsh-syntax-highlighting">下載 zsh-syntax-highlighting&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="設定">設定&lt;/h3>
+&lt;p>進vim修改 &lt;code>.zshrc&lt;/code> 並加上以下內容：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="n">typeset&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">gA&lt;/span> &lt;span class="n">ZSH_HIGHLIGHT_STYLES&lt;/span>
+&lt;span class="c1"># 防止開新視窗style失效(可能跟globle array有相關)&lt;/span>
+&lt;span class="n">ZSH_HIGHLIGHT_STYLES[alias]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
+&lt;span class="n">ZSH_HIGHLIGHT_STYLES[builtin]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
+&lt;span class="n">ZSH_HIGHLIGHT_STYLES[function]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
+&lt;span class="n">ZSH_HIGHLIGHT_STYLES[command]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中&lt;code>fg=050&lt;/code>這個數字是256色碼，更改可以換顏色&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a href="https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg">色碼表&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="套用">套用&lt;/h3>
+&lt;p>使用 &lt;code>souce .zshrc&lt;/code> 套用
+若沒有改變則：
+在 .zshrc 檔中最底下將上這一段來套用：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="c1"># For zsh syntax-highlighting&lt;/span>
+&lt;span class="n">source&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">usr&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">share&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting.zsh&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></content></entry></feed>
