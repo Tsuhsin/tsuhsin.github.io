@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>http://tsuhsin.github.io/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.82.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>tsuhsin860509@gmail.com (tsuhsin)</managingEditor><webMaster>tsuhsin860509@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 31 Mar 2021 15:26:02 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="http://tsuhsin.github.io/rss.xml"/><item><title>使用 ssh key 連接 Github</title><link>http://tsuhsin.github.io/posts/set-ssh/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/set-ssh/</guid><pubDate>Tue, 02 Feb 2021 19:20:48 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>http://tsuhsin.github.io/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.82.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>tsuhsin860509@gmail.com (tsuhsin)</managingEditor><webMaster>tsuhsin860509@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 31 Mar 2021 15:49:22 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="http://tsuhsin.github.io/rss.xml"/><item><title>使用 ssh key 連接 Github</title><link>http://tsuhsin.github.io/posts/set-ssh/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/set-ssh/</guid><pubDate>Tue, 02 Feb 2021 19:20:48 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
 &lt;blockquote>
 &lt;p>所有生成的 ssh key 都會在 &lt;code>~/.ssh&lt;/code> 裡&lt;/p>
 &lt;/blockquote>
@@ -110,37 +110,83 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">push&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">master&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description><category domain="http://tsuhsin.github.io/tags/git/">git</category><category domain="http://tsuhsin.github.io/tags/github/">github</category></item><item><title>使用 Hugo 架設靜態網站</title><link>http://tsuhsin.github.io/posts/hello-world/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/hello-world/</guid><pubDate>Sat, 30 Jan 2021 07:36:18 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。
-Hugo網站可以部署在任何地方，包括 Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Aerobatic、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure和CloudFront，並可以與CDN很好地協作。&lt;/p>
+&lt;/div></description><category domain="http://tsuhsin.github.io/tags/git/">git</category><category domain="http://tsuhsin.github.io/tags/github/">github</category></item><item><title>使用 Hugo 架設靜態網站</title><link>http://tsuhsin.github.io/posts/hugo-start/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/hugo-start/</guid><pubDate>Sat, 30 Jan 2021 07:36:18 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。&lt;/p>
+&lt;p>Hugo網站可以部署在任何地方，包括 Netlify、Heroku、GoDaddy、DreamHost、GitHub Pages、GitLab Pages、Surge、Aerobatic、Firebase、Google Cloud Storage、Amazon S3、Rackspace、Azure和CloudFront，並可以與CDN很好地協作。&lt;/p>
 &lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
-&lt;pre>&lt;code>brew install hugo
-&lt;/code>&lt;/pre>&lt;h3 id="常用指令">常用指令&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="建立新網站">建立新網站&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="n">site&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="下載主題">下載主題&lt;/h3>
 &lt;blockquote>
-&lt;p>&lt;a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/&lt;/a>&lt;/p>
+&lt;p>我使用的 &lt;a href="https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md">主題&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h4 id="建立新網站">建立新網站&lt;/h4>
-&lt;pre>&lt;code>hugo new site xxxx
-&lt;/code>&lt;/pre>&lt;h4 id="下載主題">下載主題&lt;/h4>
-&lt;blockquote>
-&lt;p>我使用的主題&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md">https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;pre>&lt;code class="language-=" data-lang="=">~ $ cd blog
-~/blog $ git init
-~/blog $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
-&lt;/code>&lt;/pre>&lt;h4 id="新建頁面">新建頁面&lt;/h4>
-&lt;pre>&lt;code>hugo new &amp;quot;xxx.md&amp;quot;
-&lt;/code>&lt;/pre>&lt;h4 id="設定-config-檔">設定 config 檔&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">~&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
+&lt;span class="o">~/&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">init&lt;/span>
+&lt;span class="o">~/&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">submodule&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">depth&lt;/span> &lt;span class="m">1&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="n">github.com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">reuixiy&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">hugo&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">meme.git&lt;/span> &lt;span class="n">themes&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">meme&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="設定-config-檔">設定 config 檔&lt;/h3>
 &lt;p>可參考下載主題裡的說明（通常會有example site）&lt;/p>
+&lt;h3 id="新建頁面">新建頁面&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="s">&amp;#34;posts/first.md&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="基本-hugo-指令">基本 hugo 指令&lt;/h3>
 &lt;h4 id="build">build&lt;/h4>
-&lt;pre>&lt;code>hugo
-&lt;/code>&lt;/pre>&lt;h4 id="local-serve-live-reload">Local serve (Live Reload)&lt;/h4>
-&lt;pre>&lt;code>hugo server
-&lt;/code>&lt;/pre>&lt;h4 id="更新-hugo">更新 Hugo&lt;/h4>
-&lt;pre>&lt;code>brew upgrade hugo
-&lt;/code>&lt;/pre>&lt;h2 id="參考資料">參考資料&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="local-serve-live-reload">Local serve (Live Reload)&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">server&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="更新-hugo">更新 Hugo&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">upgrade&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
 &lt;ol>
 &lt;li>&lt;a href="https://gohugo.io/getting-started/quick-start/">Hugo Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://io-oi.me/tech/documentation-of-hugo-theme-meme/">Hugo 主題 MemE 文檔&lt;/a>&lt;/li>
 &lt;/ol></description><category domain="http://tsuhsin.github.io/tags/hugo/">hugo</category><category domain="http://tsuhsin.github.io/tags/blog/">blog</category></item></channel></rss>
