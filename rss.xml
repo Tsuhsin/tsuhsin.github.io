@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>http://tsuhsin.github.io/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.82.0 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>tsuhsin860509@gmail.com (tsuhsin)</managingEditor><webMaster>tsuhsin860509@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 31 Mar 2021 16:22:40 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="http://tsuhsin.github.io/rss.xml"/><item><title>使用 ssh key 連接 Github</title><link>http://tsuhsin.github.io/posts/set-ssh/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/set-ssh/</guid><pubDate>Tue, 02 Feb 2021 19:20:48 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>tsuhsin</title><link>http://tsuhsin.github.io/</link><description>MemE 是一個強大且可高度定制的 GoHugo 博客主題，專為個人博客設計。</description><generator>Hugo 0.88.1 https://gohugo.io/</generator><language>zh-TW</language><managingEditor>tsuhsin860509@gmail.com (tsuhsin)</managingEditor><webMaster>tsuhsin860509@gmail.com (tsuhsin)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 10 Sep 2021 15:40:47 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="http://tsuhsin.github.io/rss.xml"/><item><title>使用 ssh key 連接 Github</title><link>http://tsuhsin.github.io/posts/set-ssh/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/set-ssh/</guid><pubDate>Tue, 02 Feb 2021 19:20:48 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>當需要從本地推檔案到 Github 上時若沒有設定 ssh key 可能會發生 &lt;code>permission deny&lt;/code> （使用 ssh 連線）或需要每次都需要打你 Github 帳密（使用http連線）的狀況，為了能夠方便地推檔案上 Github 我們需要設定 ssh key。&lt;/p>
 &lt;blockquote>
 &lt;p>所有生成的 ssh key 都會在 &lt;code>~/.ssh&lt;/code> 裡&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="連接單一-github-帳號">連接單一 Github 帳號&lt;/h2>
 &lt;h3 id="生成-ssh-key">生成 ssh key&lt;/h3>
-&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ ssh-keygen -t rsa -b 4096 -C &amp;quot;你的 Github email&amp;quot;
+&lt;pre tabindex="0">&lt;code class="language-=zsh" data-lang="=zsh">$ ssh-keygen -t rsa -b 4096 -C &amp;quot;你的 Github email&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>接下來一路 Enter 到底就可以了，這時 &lt;code>.ssh&lt;/code> 裡面就可以看到 &lt;code>id_rsa&lt;/code> 和 &lt;code>id_rsa.pub&lt;/code> 這兩個檔案，前者是私鑰、後者是公鑰（後面有.pub的）&lt;/p>
 &lt;h3 id="把公鑰設定在-github-上">把公鑰設定在 Github 上&lt;/h3>
 &lt;p>先將剛剛生成的公鑰 &lt;code>id_rsa.pub&lt;/code> 複製起來&lt;/p>
-&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ cat id_rsa.pub
+&lt;pre tabindex="0">&lt;code class="language-=zsh" data-lang="=zsh">$ cat id_rsa.pub
 &lt;/code>&lt;/pre>&lt;p>登入你的 Github ，到 Setting &amp;gt; SSH and GPG keys 這個頁面，點下 &lt;code>New SSH key&lt;/code> 將複製好的公鑰貼上，點 &lt;code>add SSH key&lt;/code> 就設定完成。（ title 那裡可以自己取名）
 &lt;img src="https://i.imgur.com/Yw0ZBH8.png" alt="">&lt;/p>
 &lt;h2 id="連接多個-github-帳號">連接多個 Github 帳號&lt;/h2>
 &lt;h3 id="生成-ssh-key-1">生成 ssh key&lt;/h3>
 &lt;p>&lt;code>ssh-keygen&lt;/code> 之後看到這句時&lt;/p>
-&lt;pre>&lt;code>Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa):
+&lt;pre tabindex="0">&lt;code>Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa):
 &lt;/code>&lt;/pre>&lt;p>先不要 Enter，將預設的&lt;code>id_rsa&lt;/code>後加上你的 GitHub 帳號名
 例如：&lt;code>id_rsa_sandy&lt;/code>&lt;/p>
-&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh"># Github帳號 1
+&lt;pre tabindex="0">&lt;code class="language-=zsh" data-lang="=zsh"># Github帳號 1
 $ ssh-keygen -t rsa -b 4096 -C &amp;quot;sandy@gmail.com&amp;quot;
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa): /Users/azusa2658/.ssh/id_rsa_sandy
@@ -26,12 +26,12 @@ $ ssh-keygen -t rsa -b 4096 -C &amp;quot;cindy@gmail.com&amp;quot;
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/azusa2658/.ssh/id_rsa): /Users/azusa2658/.ssh/id_rsa_cindy
 &lt;/code>&lt;/pre>&lt;h3 id="添加私鑰到-ssh-agent">添加私鑰到 ssh-agent&lt;/h3>
-&lt;pre>&lt;code class="language-=zsh" data-lang="=zsh">$ eval &amp;quot;$(ssh-agent -s)&amp;quot;
+&lt;pre tabindex="0">&lt;code class="language-=zsh" data-lang="=zsh">$ eval &amp;quot;$(ssh-agent -s)&amp;quot;
 $ ssh-add ~/.ssh/id_rsa_sandy
 $ ssh-add ~/.ssh/id_rsa_cindy
 &lt;/code>&lt;/pre>&lt;h3 id="設定-config-檔">設定 config 檔&lt;/h3>
 &lt;p>在 &lt;code>~/.ssh&lt;/code> 下新增一個 config 檔，內容如下（請自行修改&lt;code>host&lt;/code> 和 &lt;code>IdentityFile&lt;/code>）&lt;/p>
-&lt;pre>&lt;code class="language-=" data-lang="=">host sandy.github.com
+&lt;pre tabindex="0">&lt;code class="language-=" data-lang="=">host sandy.github.com
 Hostname github.com
 User sandy
 IdentityFile ~/.ssh/id_rsa_sandy
@@ -40,7 +40,7 @@ HostName github.com
 User cindy
 IdentityFile ~/.ssh/id_rsa_cindy
 &lt;/code>&lt;/pre>&lt;h3 id="修改相對應-repository-的遠端連結網址">修改相對應 Repository 的遠端連結網址&lt;/h3>
-&lt;pre>&lt;code># Github帳號 1
+&lt;pre tabindex="0">&lt;code># Github帳號 1
 ~/sandy-blog
 $ git remote set-url origin git@sandy.github.com:sandy/sandy-blog.git
 # Github帳號 2
@@ -60,31 +60,31 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;p>進 command line 先在本地建一個專案資料夾 (local repository)並進資料夾&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">mkdir&lt;/span> &lt;span class="n">test&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">mkdir&lt;/span> &lt;span class="n">test&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo&lt;/span>
 &lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">test&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>接著設定git&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">init&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">init&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>這時就可以做第一個 commit (一定要有commit才能推到遠端)&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">.
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">.
 &lt;/span>&lt;span class="n">&lt;/span>&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">commit&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">m&lt;/span> &lt;span class="s">&amp;#34;git init&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -93,10 +93,10 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;p>之後回到 command line 這裡，將本地跟遠端連結&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">remote&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">git&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">github.com&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">Tsuhsin&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">test&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo.git&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">remote&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">git&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">github.com&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="n">Tsuhsin&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">test&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">repo.git&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>網址是剛剛建好的 repo 的網址 (直接複製ssh)
@@ -104,10 +104,10 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;p>最後push上去就大功告成了&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">push&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">master&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">push&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u&lt;/span> &lt;span class="n">origin&lt;/span> &lt;span class="n">master&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description><category domain="http://tsuhsin.github.io/tags/git/">git</category><category domain="http://tsuhsin.github.io/tags/github/">github</category></item><item><title>使用 Hugo 架設靜態網站</title><link>http://tsuhsin.github.io/posts/hugo-start/</link><guid isPermaLink="true">http://tsuhsin.github.io/posts/hugo-start/</guid><pubDate>Sat, 30 Jan 2021 07:36:18 +0800</pubDate><author>tsuhsin860509@gmail.com (tsuhsin)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>Hugo是一種用Go語言編寫的靜態網站生成器，使用Hugo構建的網站非常快速和安全。&lt;/p>
@@ -115,19 +115,19 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;h3 id="安裝-hugo">安裝 Hugo&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">hugo&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="建立新網站">建立新網站&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="n">site&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="n">site&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="下載主題">下載主題&lt;/h3>
@@ -136,12 +136,12 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">~&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">~&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">cd&lt;/span> &lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span>
 &lt;span class="o">~/&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">init&lt;/span>
 &lt;span class="o">~/&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">blog&lt;/span> &lt;span class="o">$&lt;/span> &lt;span class="n">git&lt;/span> &lt;span class="n">submodule&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">depth&lt;/span> &lt;span class="m">1&lt;/span> &lt;span class="n">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="n">github.com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">reuixiy&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">hugo&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">meme.git&lt;/span> &lt;span class="n">themes&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">meme&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -151,38 +151,38 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;h3 id="新建頁面">新建頁面&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="s">&amp;#34;posts/first.md&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">new&lt;/span> &lt;span class="s">&amp;#34;posts/first.md&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="基本-hugo-指令">基本 hugo 指令&lt;/h3>
 &lt;h4 id="build">build&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="local-serve-live-reload">Local serve (Live Reload)&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">server&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">server&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="更新-hugo">更新 Hugo&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">upgrade&lt;/span> &lt;span class="n">hugo&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">upgrade&lt;/span> &lt;span class="n">hugo&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="參考資料">參考資料&lt;/h2>
@@ -194,28 +194,28 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;h4 id="安裝-brew">安裝 &lt;code>brew&lt;/code>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">ruby&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">e&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">ruby&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">e&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="安裝-zsh">安裝 &lt;code>zsh&lt;/code>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="安裝-oh-my-zsh">安裝 &lt;code>oh-my-zsh&lt;/code>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">sh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">sh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">c&lt;/span> &lt;span class="s">&amp;#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
@@ -223,19 +223,19 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">cp&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.oh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">templates&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zshrc.zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">template&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.zshrc&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">cp&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.oh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">my&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">templates&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zshrc.zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">template&lt;/span> &lt;span class="o">~/&lt;/span>&lt;span class="n">.zshrc&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="修改預設的-shell-為-zsh">修改預設的 shell 為 &lt;code>zsh&lt;/code>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">chsh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">s&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">usr&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">bin&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">chsh&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">s&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">usr&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">bin&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="設定主題">設定主題&lt;/h2>
@@ -253,7 +253,7 @@ $ git remote set-url origin git@cindy.github.com:cindy/cindy-blog.git
 &lt;img src="https://i.imgur.com/KMAEGPC.png" alt="">&lt;/p>
 &lt;h4 id="下載字型">下載字型&lt;/h4>
 &lt;p>將字型clone至Home&lt;/p>
-&lt;pre>&lt;code>git clone https://github.com/powerline/fonts.git
+&lt;pre tabindex="0">&lt;code>git clone https://github.com/powerline/fonts.git
 sudo ./fonts/install.sh
 &lt;/code>&lt;/pre>&lt;h4 id="設定字型">設定字型&lt;/h4>
 &lt;p>以 iTerm2 為例：&lt;/p>
@@ -265,17 +265,17 @@ sudo ./fonts/install.sh
 &lt;h3 id="下載-zsh-syntax-highlighting">下載 zsh-syntax-highlighting&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="o">$&lt;/span> &lt;span class="n">brew&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="設定">設定&lt;/h3>
 &lt;p>進vim修改 &lt;code>.zshrc&lt;/code> 並加上以下內容：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
 &lt;/span>&lt;span class="lnt">4
@@ -283,7 +283,7 @@ sudo ./fonts/install.sh
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="n">typeset&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">gA&lt;/span> &lt;span class="n">ZSH_HIGHLIGHT_STYLES&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="n">typeset&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">gA&lt;/span> &lt;span class="n">ZSH_HIGHLIGHT_STYLES&lt;/span>
 &lt;span class="c1"># 防止開新視窗style失效(可能跟globle array有相關)&lt;/span>
 &lt;span class="n">ZSH_HIGHLIGHT_STYLES[alias]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
 &lt;span class="n">ZSH_HIGHLIGHT_STYLES[builtin]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">050&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">bold&lt;/span>
@@ -301,11 +301,11 @@ sudo ./fonts/install.sh
 在 .zshrc 檔中最底下將上這一段來套用：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="c1"># For zsh syntax-highlighting&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-s" data-lang="s">&lt;span class="c1"># For zsh syntax-highlighting&lt;/span>
 &lt;span class="n">source&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="n">usr&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">local&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">share&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">zsh&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">syntax&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">highlighting.zsh&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
